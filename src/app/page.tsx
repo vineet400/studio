@@ -1,3 +1,4 @@
+
 "use client";
 
 import type * as React from 'react';
@@ -227,7 +228,7 @@ export default function CodemobilePage() {
         isGenerating={isLoadingSuggestions}
       />
       <div className="flex flex-1 flex-col md:flex-row overflow-hidden">
-        <div className="w-full md:w-3/5 flex flex-col p-1 md:p-2 space-y-1 md:space-y-2 overflow-y-auto">
+        <div className="flex-1 w-full md:flex-none md:w-3/5 flex flex-col p-1 md:p-2 space-y-1 md:space-y-2 overflow-y-auto min-h-0">
           <Tabs value={activeTab} onValueChange={(value) => setActiveTab(value as SupportedLanguage)} className="flex-1 flex flex-col min-h-0">
             <TabsList className="shrink-0 sticky top-0 bg-background z-10 px-1 py-1.5 h-auto">
               <TabsTrigger value="html" className="px-3 py-1.5 text-sm">HTML</TabsTrigger>
@@ -249,7 +250,7 @@ export default function CodemobilePage() {
         
         <Separator orientation="vertical" className="hidden md:block mx-0.5" />
 
-        <div className="w-full md:w-2/5 p-1 md:p-2 overflow-y-auto flex flex-col">
+        <div className="flex-1 w-full md:flex-none md:w-2/5 p-1 md:p-2 overflow-y-auto flex flex-col min-h-0">
           <PreviewPanel html={liveHtml} css={liveCss} js={liveJs} />
         </div>
       </div>
